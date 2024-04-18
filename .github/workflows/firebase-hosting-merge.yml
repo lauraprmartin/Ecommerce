@@ -30,9 +30,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: cd frontend && pnpm install
-      - run: pnpm release
+      - name: Install dependencies, build and deploy
+        run: cd frontend && pnpm install && pnpm release
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
