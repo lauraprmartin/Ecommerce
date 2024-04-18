@@ -33,8 +33,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
-      - run: cd frontend && npm ci
+        run: cd frontend && pnpm install
+      - run: pnpm ci
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
