@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": "20",
+    "node": "18",
     "npm": "please-use-pnpm",
     "yarn": "please-use-pnpm",
     "pnpm": "^9"
@@ -11,7 +11,7 @@
   "scripts": {
     "firebase:start": "firebase serve",
     "build": "pnpm -r run build",
-    "postinstall": "husky install",
+    "postinstall": "husky",
     "precommit": "pnpm -r run lint",
     "pre-push": "pnpm -r run lint && pnpm -r run test"
   },
