@@ -7,11 +7,15 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "compile:sass": "sass src/assets/styles/**/*.scss dist/css"
   },
   "dependencies": {
-    "astro": "^4.6.2",
     "@astrojs/check": "^0.5.10",
+    "astro": "^4.6.2",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "sass": "^1.75.0"
   }
 }

@@ -1,0 +1,21 @@
+---
+interface Props {
+    logo: string;
+	navitem: string;
+}
+
+const { logo, navitem } = Astro.props;
+---
+
+<div class="header_container">
+    <div class="header">
+        <div class="logo_container">
+            <img src={logo} alt="">
+        </div>
+        <div class="navbar_container">
+            <ul>
+                <li>{navitem}</li>
+            </ul>
+        </div>
+    </div>
+</div>

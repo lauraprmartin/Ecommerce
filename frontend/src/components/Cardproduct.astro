@@ -1,0 +1,33 @@
+---
+interface Props {
+	label: string;
+	favicon: string;
+	img: string;
+	title: string;
+	category: string;
+	alergen: string;
+}
+
+const { label, favicon, img, title, category, alergen } = Astro.props;
+---
+
+<div class="card_product">
+    <div class="imgcontainer_cardproduct">
+        <div class="top_cardproduct">
+            <div class="labelcontainer_cardproduct">
+                <span class="label_cardproduct">{label}</span>
+            </div>
+            <i>{favicon}</i>
+        </div>
+        <div class="bottom_cardproduct">
+            <div class="bottomtop_cardproduct">
+                <h3>{title}</h3>
+                <div class="bottomtopicons_cardproduct">
+                    <i>{alergen}</i>
+                </div>
+            </div>
+            <h4>{category}</h4>
+        </div>
+        <a href={img}></a>
+    </div>
+</div>
