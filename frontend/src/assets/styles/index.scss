@@ -1,0 +1,181 @@
+/* 
+    Este documento SCSS se organiza en dos partes generales:
+        En primer lugar se muestran los estilos de las etiquetas
+        generales aplicables a cualquier página del sitio como 
+        la tipografía, variables sobre diferentes conceptos como
+        colores, tamaños de textos...
+
+        En segundo lugar, se definen los estilos de los componentes
+        reutilizables en cualquier página. 
+
+        Por último, los estilos de las páginas individuales, aquellos
+        que no se repiten en ninguna otra parte del sitio web. 
+
+        --> A la derecha de cada elemento se muestra un código a modo
+            de índice para acceder a cada sección dentro del documento 
+
+    ÍNDICE: 
+        - Etiquetas/Elementos generales______________________ gen_00
+            - Tipografía................ gen_tipo
+            - Propiedades generales..... gen_prop
+            - Headings y textos......... gen_headings
+            - Body...................... gen_body
+
+        - Componentes reutilizables__________________________ com_00
+            - Botones................... gen_botones
+            - Formularios............... gen_form
+            - Tablas.................... gen_tablas
+            - Header.................... gen_header
+            - Main...................... gen_main
+            - Footer.................... gen_footer
+            - Modal..................... gen_modal
+
+        - Páginas individuales_______________________________ pag_00
+            1. Home..................... pag_home
+            2. Menu..................... pag_menu
+            3. Meal plans............... pag_plans
+            4. How it works............. pag_howitworks
+            5. Contact.................. pag_contact
+            6. FAQS..................... pag_faqs
+            7. Login.................... pag_login
+*/
+
+/* ETIQUETAS GENERALES________________________________________________ gen_00 */
+/* Tipografía.......................................gen_tipo */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+// font-family: "DM Sans", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+// font-family: "Manrope", sans-serif;
+
+/* Propiedades generales............................gen_prop */
+:root {
+    /* Colores */
+    $primary-color: ; // fondos, textos, iconos...
+    $secondary-color: ; // solo usar para fondos
+    
+    /* Escala de grises */
+    $accent-01: ; // fondo cajas, barras scroll, líneas horizontales...
+    $accent-02: ; // Fondo de botones
+    $accent-03: ; // Fondo de página
+    $accent-04: ; // Fondo de etiquetas y marcador de sección menú
+    $light-color: white; 
+
+    $danger-dark: #FF3E1D;
+    $danger-light: #fff0ee;
+    $warning-dark: #FFAC02;
+    $warning-light: #FFF5E3;
+    $success-dark: #60B400;
+    $success-light: #F0FBE8;
+
+    /* Textos */
+    $font: 'Manrope', sans-serif;
+    $text-dark-color: ;
+    $text-light-color: ;
+
+    /* Tamaños */
+    font-size: 16px; // Tamaño de fuente base
+
+    $head-h1: 1.375rem; // 22px / 16px = 1.375rem
+    $head-h2: 1.25rem; // 20px / 16px = 1.25rem
+    $head-h3: 1.125rem; // 18px / 16px = 1.125rem
+    $head-h4: 1rem; // 16px / 16px = 1rem
+    $size-p: 0.875rem; // 14px / 16px = 0.875rem
+    $head-h5: 0.75rem; // 12px / 16px = 0.75rem
+}
+
+/* Headings y textos............................gen_headings */
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--font-h1); 
+    font-weight: 400;
+}
+
+h2 {
+    font-size: var(--font-h2); 
+    font-weight: 400;
+}
+
+h3 {
+    font-size: var(--font-h3); 
+    font-weight: 500;
+}
+
+h4 {
+    font-size: var(--font-h4); 
+    font-weight: 400;
+}
+
+h5 {
+    font-size: var(--font-h5); 
+}
+
+h6 {
+    font-size: var(--font-h6);
+}
+
+p {
+    color: rgba(29, 31, 46, 0.7);
+    font-size: var(--font-p); 
+    line-height: 1.75rem; 
+    font-weight: 400;
+}
+
+/* Body.......................................... com_body */
+
+/* COMPONENTES REUTILIZABLES__________________________________________ com_00 */
+/* Botones...................................... com_botones */ 
+button {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--font-h5);
+}
+
+.button_border {
+    font-size: var(--font-h5);
+    margin: 0;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: solid 1px var(--primary-color);
+
+    &:hover {
+        cursor: pointer;
+        margin: 0;
+        background-color: var(--primary-color);
+        border: solid 1px var(--primary-color);
+    }
+}
+
+.button_filled {
+    font-size: var(--font-h5);
+    letter-spacing: 1px;
+    margin: 0;
+    color: var(--text-neutro-color);
+    background-color: var(--primary-color);
+    border: solid 1px transparent;
+
+    &:hover {
+        cursor: pointer;
+        margin: 0;
+        color: var(--primary-color);
+        background-color: transparent;
+        border: solid 1px var(--primary-color);
+    }
+}
+
+
+/* Formularios................................... com_form */
+/* Tablas........................................ com_tablas */
+/* Header........................................ com_header */
+/* Main.......................................... com_main */
+/* Footer........................................ com_footer */
+
+/* PÁGINAS____________________________________________________________ pag_00 */
+/* 1. Página HOME................................ pag_home */
+/* 2. Página MENU................................ pag_menu */
+/* 3. Página MEAL PLANS.......................... pag_plans */
+/* 4. Página HOW IT WORKS........................ pag_howitworks */
+/* 5. Página CONTACT............................. pag_contact */
+/* 6. Página FAQS................................ pag_faqs */
+/* 7. Página LOGIN............................... pag_login */
