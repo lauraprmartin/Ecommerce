@@ -1,18 +1,36 @@
 {
-  "name": "frontend",
+  "name": "keweat-frontend",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": "20",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": "^9"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "release": "astro check && astro build"
+    "release": "astro check && astro build",
+    "lint": "prettier --no-error-on-unmatched-pattern --write **/*.{astro,js,ts,tsx,json,md} && eslint",
+    "pre-push": "pnpm build",
+    "test": "echo \"Error: no test yet implemented\" && exit 0",
+    "prepare": "husky"
   },
   "dependencies": {
-    "astro": "^4.6.2",
     "@astrojs/check": "^0.5.10",
+    "astro": "^4.6.2",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^9.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^0.34.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }
