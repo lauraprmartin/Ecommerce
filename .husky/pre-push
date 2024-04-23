@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+[[ -f ./.env ]] && source ./.env
+
+if [[ "${SKIP_PREPUSH:-no}" != "no" ]]; then
+  echo "Skipping pre-push because SKIP_PREPUSH was set to '" $SKIP_PREPUSH "'"
+  exit 0
+fi
+
+echo running hook
+
+pnpm pre-push
